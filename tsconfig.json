@@ -7,6 +7,10 @@
       "dom.iterable",
       "esnext"
     ],
+    "paths": {
+      "*.ts": ["*"]
+    },
+    "allowImportingTsExtensions": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

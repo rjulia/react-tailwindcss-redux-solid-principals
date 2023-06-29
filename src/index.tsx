@@ -14,17 +14,17 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <ErrorBoundary 
-    FallbackComponent={ErrorBoundaryComponent}
+  <React.StrictMode>
+    <ErrorBoundary
+      FallbackComponent={ErrorBoundaryComponent}
     // onError={(error, info) => {
     //   console.log(error);
     //   console.log(info);
     // }}
-  >
-    <React.StrictMode>
+    >
       <App />
-    </React.StrictMode>
-  </ErrorBoundary>
+    </ErrorBoundary>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
