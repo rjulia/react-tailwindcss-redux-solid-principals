@@ -1,6 +1,6 @@
 // import axios from "axios";
 import { useEffect, useReducer } from 'react'
-import makeRequest from '../../../helpers/make-request.ts'
+import makeRequest from '../../../helpers/makeRequest.ts'
 import { ACTION_TYPES, dataReducer, INITAL_STATE } from '../reducers/productsDataReducer.ts'
 
 export const useProducts = () => {

@@ -1,17 +1,16 @@
 import './home.css'
 import ProductCard from '../../components/ProductCard.tsx'
 import { useProducts } from './hooks/useProducts.ts'
-import Title from '../../components/Title.tsx'
+import Title from '../../components/Ttitle/Title.tsx'
 import { Product } from '../../types/typesProduct.ts'
+import Loading from '../../components/Loading.tsx'
 
 const Home = () => {
   const { products, loading } = useProducts()
   return (
     <div className='container m-auto'>
       {loading ? (
-        <div className='flex justify-center items-center h-screen'>
-          <div className='animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary' />
-        </div>
+        <Loading />
       ) : (
         <>
           <div className='mt-8 text-center'>
