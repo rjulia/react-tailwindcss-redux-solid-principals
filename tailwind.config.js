@@ -13,9 +13,10 @@ module.exports = {
         current: 'currentColor',
         black: '#000',
         white: '#fff',
+        text: '#b2b2b2',
         primary: {
           DEFAULT: '#0353A4',
-          dark: '061A40',
+          dark: '#061A40',
           light: '#B9D6F2',
         },
       },
