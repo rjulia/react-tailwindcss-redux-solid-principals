@@ -7,9 +7,13 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": "./",
+
     "paths": {
-      "*.ts": ["*"]
+      "*.ts": ["*"],
+      "@/*": ["src/*"]
     },
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.js", "**/*.spec.js"]}],
     "allowImportingTsExtensions": true,
     "allowJs": true,
     "skipLibCheck": true,
@@ -23,8 +27,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
-  },
+    "jsx": "react-jsx",
+    },
   "include": [
     "src"
   ]
