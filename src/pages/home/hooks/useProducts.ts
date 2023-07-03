@@ -7,14 +7,14 @@ export const useProducts = () => {
   const [state, dispatch] = useReducer(dataReducer, INITAL_STATE)
 
   const fetchProducts = async () => {
-    dispatch({ type: ACTION_TYPES.FETCH_START })
+    dispatch({ type: ACTION_TYPES.FETCH_START_PRODUCTS })
     makeRequest({
       endPoint: '/products',
       method: 'GET',
     }).then((response) => {
-      dispatch({ type: ACTION_TYPES.FETCH_SUCCESS, payload: response })
+      dispatch({ type: ACTION_TYPES.FETCH_SUCCESS_PRODUCTS, payload: response })
     }).catch((error) => {
-      dispatch({ type: ACTION_TYPES.FETCH_ERROR, payload: error })
+      dispatch({ type: ACTION_TYPES.FETCH_ERROR_PRODUCTS, payload: error })
     })
   }
 

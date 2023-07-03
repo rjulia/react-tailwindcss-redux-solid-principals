@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import { Product } from '../../types/typesProduct.ts'
+import Title from '../Title/Title.tsx'
 
 const ProductCard = ({ product }: {
   product: Product
@@ -8,7 +10,14 @@ const ProductCard = ({ product }: {
       <div className='flex justify-center my-4'>
         <img src={product.image} alt={product.title} className="w-auto h-32" />
       </div>
-      <h1 className="mt-4 text-xl font-bold text-primary-dark hover:text-primary-light">{product.title}</h1>
+
+      <Link to={`/product/${product.id}`} className="mt-4 text-xl font-bold text-primary-dark hover:text-primary-light">
+        <Title
+          tag="h2"
+          title={product.title}
+          classnames="text-xl font-bold text-primary-dark hover:text-primary-light"
+        />
+      </Link>
       <p className="mt-2 text-text">{product.description}</p>
     </div>
     <div className='flex items-center justify-between w-full mt-4'>

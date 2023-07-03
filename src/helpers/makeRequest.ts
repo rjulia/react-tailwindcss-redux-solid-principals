@@ -16,7 +16,7 @@ function makeRequest({
     'Content-Type': 'application/json',
   }
   const urlBase = process.env.REACT_APP_URL_API
-  const url = `${urlBase}${endPoint}?${params}`
+  const url = !params ? `${urlBase}${endPoint}` : `${urlBase}${endPoint}?${params}`
   return axios({
     method,
     url,
