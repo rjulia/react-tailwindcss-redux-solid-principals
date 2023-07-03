@@ -27,17 +27,15 @@
     "document": true,
     "navigator": true,
     "localStorage": true,
-    "FormData": true,
-    "FileReader": true,
-    "Blob": true
   },
   "extends": [
     "eslint:recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react-redux/recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "airbnb-base"
   ],
-  // "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
